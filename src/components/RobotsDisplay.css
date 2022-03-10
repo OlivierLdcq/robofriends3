@@ -1,0 +1,10 @@
+.RobotsDisplay {
+  display: grid;
+  margin-left: 10%;
+  margin-right: 10%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.robotsCtn {
+  background-color: aqua;
+}
