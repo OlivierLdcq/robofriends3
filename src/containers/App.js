@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import RobotsDisplay from "../components/RobotsDisplay";
+import Scroll from "../components/Scroll";
 import SearchField from "../components/SearchField";
 import "./App.css";
+import ErrorBoundary from "./ErrorBoundary";
 class App extends Component {
   constructor() {
     super();
@@ -31,7 +33,12 @@ class App extends Component {
     return (
       <div className="App">
         <SearchField inputGotChanged={this.inputGotChanged} />
-        <RobotsDisplay robotsList={filteredList} />
+        <Scroll>
+          {" "}
+          <ErrorBoundary>
+            <RobotsDisplay robotsList={filteredList} />
+          </ErrorBoundary>
+        </Scroll>
       </div>
     );
   }
