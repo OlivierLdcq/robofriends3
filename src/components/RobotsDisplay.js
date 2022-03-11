@@ -3,9 +3,6 @@ import Card from "./Card";
 import "./RobotsDisplay.css";
 
 const RobotsDisplay = ({ robotsList }) => {
-  if (true) {
-    throw new Error("oupsy");
-  }
   return (
     <div className="RobotsDisplay">
       {robotsList.map((robot) => {
